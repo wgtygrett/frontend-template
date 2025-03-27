@@ -61,10 +61,15 @@ For more information on using the Angular CLI, including detailed command refere
 ## About the project
 This is an exercise in TailwindCSS (more specifically, v3) mainly.
 
-# Questions asked:
-- Q: Why `standalone: false` ?
-- - A: This was a legacy project and meant to maintain backwards compatibility.
-- Q: Why all the Beatles references?
-- - A: They're one of my favorite bands. Yes, *really*.
-- Q: Why use Tailwind v3 over v4?
-- - A: It's (likely) more widely used, stable, and developed a while ago. The fundamentals are the same.
+## Questions Asked:
+- **Q:** Why `standalone: false`?
+  - **A:** This was a legacy project and meant to maintain backwards compatibility.
+
+- **Q:** Why all the Beatles references?
+  - **A:** They're one of my favorite bands. Yes, *really*.
+
+- **Q:** Why use Tailwind v3 over v4?
+  - **A:** It's (likely) more widely used, stable, and developed a while ago. The fundamentals are the same.
+
+- **Q:** Where is this hosted?
+  - **A:** Unfortunately for the world I've decided to host this [here](https://wendytygrett.me). If it doesn't work... I forgot to renew the domain. Oops!
