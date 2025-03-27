@@ -1,4 +1,7 @@
-# FrontendExample
+# General Angular Spiel:
+Note: 
+This may not work entirely to spin up the app.
+I've only done it on one machine so far, and that included some aspects that may be unintuitive (meaning, had to specify no-standalone). Try it but you've been warned. You may have to debug.
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
 
@@ -59,7 +62,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
 ## About the project
-This is an exercise in TailwindCSS (more specifically, v3) mainly.
+This is an exercise in TailwindCSS (more specifically, v3).
 
 ## Questions Asked:
 - **Q:** Why `standalone: false`?
@@ -73,3 +76,8 @@ This is an exercise in TailwindCSS (more specifically, v3) mainly.
 
 - **Q:** Where is this hosted?
   - **A:** Unfortunately for the world I've decided to host this [here](https://wendytygrett.me). If it doesn't work... I forgot to renew the domain. Oops!
+
+## Upcoming Enhancements:
+- Fixes to the Karma + Jasmine tests
+- Asset inclusion (pictures, additional icons)
+- Selenium testing once measurable things are added (forms that have requirements, buttons that should/shouldn't be clicked, etc.); for now this is just an example template of components.
