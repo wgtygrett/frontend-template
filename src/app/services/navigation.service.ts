@@ -22,7 +22,7 @@ export class NavigationService {
 
   setShowNav(showHide: boolean) {
     this.showNav$.next(showHide)
-    console.log("Nav clicked")
+    // console.log("Nav clicked")
   }
 
   toggleNavState() {
