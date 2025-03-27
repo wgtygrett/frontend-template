@@ -81,3 +81,5 @@ This is an exercise in TailwindCSS (more specifically, v3).
 - Fixes to the Karma + Jasmine tests
 - Asset inclusion (pictures, additional icons)
 - Selenium testing once measurable things are added (forms that have requirements, buttons that should/shouldn't be clicked, etc.); for now this is just an example template of components.
+- Add a tab module.
+- Add a content box/info section module (that can hold above tabs).
