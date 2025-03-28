@@ -21,6 +21,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { TemplateComponent } from './pages/template/template.component';
 import { SideNavComponent } from './organisms/side-nav/side-nav.component';
+import { AboutMeComponent } from './pages/about-me/about-me.component';
+import { SlideRightComponent } from './animations/slide-right/slide-right.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { SideNavComponent } from './organisms/side-nav/side-nav.component';
     HomeComponent,
     NotFoundComponent,
     TemplateComponent,
-    SideNavComponent
+    SideNavComponent,
+    AboutMeComponent,
+    SlideRightComponent
   ],
   imports: [
     BrowserModule,
