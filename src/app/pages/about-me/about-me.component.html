@@ -1,0 +1,115 @@
+<div class="flex items-center justify-center pt-10">
+    <h1 class="text-5xl text-center flex items-center">
+        Wendy&nbsp;
+        <app-slide-right [text]="'Tygrett'" class="font-semibold"></app-slide-right>
+    </h1>
+</div>
+<div class="flex flex-col items-center justify-start h-[75vh] pt-8 space-y-8">
+    <div class="flex justify-center space-x-4 flex-wrap sm:flex-nowrap">
+        <app-button [borderRadius]="'2rem'" variant="navy">LinkedIn</app-button>
+        <app-button [borderRadius]="'2rem'" variant="eggplant">GitHub</app-button>
+        <app-button [borderRadius]="'2rem'" variant="emerald">Resume</app-button>
+    </div>
+<!-- Content Panels -->
+    <div class="">
+        <!-- Work Experience Section -->
+        <!-- Note: max-w-lg was removed to allow larger content viewing -->
+        <div class="w-full p-6 flex flex-col flex-grow">
+            <div class="px-2 font-semibold">WORK EXPERIENCE</div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg flex-grow">
+                <div class="flex space-x-4 pb-2 overflow-x-auto justify-center">
+                    <button *ngFor="let tab of workTabs"
+                            class="py-2 px-4 text-gray-700 font-medium transition-all duration-200"
+                            [class.bg-white]="activeWorkTab === tab"
+                            [class.shadow-md]="activeWorkTab === tab"
+                            [class.rounded-lg]="activeWorkTab === tab"
+                            [class.border-none]="activeWorkTab !== tab"
+                            (click)="setActiveWorkTab(tab)">
+                        {{ tab }}
+                    </button>
+                </div>
+                <div class="mt-4 text-gray-800 text-center">
+                    <ng-container *ngIf="activeWorkTab === 'CGI 2023-2025'">
+                        <p class="font-semibold">June 2023 - Current ({{ currentMonthYear }})</p>
+                        <p class="text-lg font-semibold">COMPANY A</p>
+                        <p class="italic">Software Engineer</p>
+                        <ul class="list-disc list-inside text-left w-full">
+                            <li>Placeholder</li>
+                            <li>Placeholder</li>
+                            <li>Placeholder</li>
+                            <li>Placeholder</li>
+                        </ul>
+                    </ng-container>
+                    <ng-container *ngIf="activeWorkTab === 'CGI 2022-2023'">
+                        <p class="font-semibold">March 2022 - June 2023</p>
+                        <p class="text-lg font-semibold">COMPANY B</p>
+                        <p class="italic">Software Engineer</p>
+                        <ul class="list-disc list-inside text-left w-full">
+                            <li>Placeholder</li>
+                            <li>Placeholder</li>
+                            <li>Placeholder</li>
+                            <li>Placeholder</li>
+                        </ul>
+                    </ng-container>
+                    <ng-container *ngIf="activeWorkTab === 'CGI 2019-2022'">
+                        <p class="font-semibold">June 2019 - March 2022</p>
+                        <p class="text-lg font-semibold">COMPANY C</p>
+                        <p class="italic">Software Engineer</p>
+                        <ul class="list-disc list-inside text-left w-full">
+                            <li>Placeholder</li>
+                            <li>Placeholder</li>
+                            <li>Placeholder</li>
+                            <li>Placeholder</li>
+                        </ul>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other Experience Section -->
+        <div class="w-full p-6 flex flex-col flex-grow">
+            <div class="px-2 font-semibold">OTHER EXPERIENCE</div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg flex-grow">
+                <div class="flex space-x-4 pb-2 overflow-x-auto justify-center">
+                    <button *ngFor="let tab of otherTabs"
+                            class="py-2 px-4 text-gray-700 font-medium transition-all duration-200"
+                            [class.bg-white]="activeOtherTab === tab"
+                            [class.shadow-md]="activeOtherTab === tab"
+                            [class.rounded-lg]="activeOtherTab === tab"
+                            [class.border-none]="activeOtherTab !== tab"
+                            (click)="setActiveOtherTab(tab)">
+                        {{ tab }}
+                    </button>
+                </div>
+                <div class="mt-4 text-gray-800 text-center">Placeholder</div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="w-full p-6 flex flex-col flex-grow">
+            <div class="px-2 font-semibold">SKILLS</div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg flex-grow">
+                <div class="flex space-x-4 pb-2 overflow-x-auto justify-center">
+                    <button *ngFor="let tab of skillsTabs"
+                            class="py-2 px-4 text-gray-700 font-medium transition-all duration-200"
+                            [class.bg-white]="activeSkillsTab === tab"
+                            [class.shadow-md]="activeSkillsTab === tab"
+                            [class.rounded-lg]="activeSkillsTab === tab"
+                            [class.border-none]="activeSkillsTab !== tab"
+                            (click)="setActiveSkillsTab(tab)">
+                        {{ tab }}
+                    </button>
+                </div>
+                <div class="mt-4 text-gray-800 text-center">Placeholder</div>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="w-full p-6 flex flex-col flex-grow">
+            <div class="px-2 font-semibold">EDUCATION</div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg flex-grow">
+                <div class="mt-4 text-gray-800 text-center">Placeholder</div>
+            </div>
+        </div>
+    </div>
+</div>

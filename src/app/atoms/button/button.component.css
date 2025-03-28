@@ -1,72 +1,128 @@
 .btn {
-    position: relative;
-    text-align: center;
-    padding: 12px 16px;
-    font-size: 1rem;
-    border: 1px solid transparent;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
-    font-weight: 500;
-  }
-  
-  .btn:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px #93c5fd, 0 0 0 4px rgba(255, 255, 255, 1);
-  }
-  
-  .btn-primary {
-    color: white;
-    background-color: #3b82f6;
-  }
-  
-  .btn-primary:hover {
-    background-color: #1e40af;
-  }
-  
-  .btn-secondary {
-    color: #3b82f6;
-    background-color: #f3f4f6;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #dbeafe;
-  }
-  
-  .btn-warning {
-    color: white;
-    background-color: #f87171;
-  }
-  
-  .btn-warning:hover {
-    background-color: #dc2626;
-  }
-  
-  .btn-open {
-    color: #3b82f6;
-    background: none;
-    box-shadow: none;
-  }
-  
-  .btn-open:hover {
-    color: #1e40af;
-  }
-  
-  .btn-open:hover::after {
-    content: '';
-    position: absolute;
-    background-color: #1e40af;
-    bottom: 8px;
-    height: 1px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: calc(100% - 2rem);
-  }
-  
-  .btn:disabled {
-    color: #9ca3af;
-    background-color: #f9fafb;
-    box-shadow: none;
-    cursor: not-allowed;
-  }
-  
+  position: relative;
+  text-align: center;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #93c5fd, 0 0 0 4px rgba(255, 255, 255, 1);
+}
+
+/* Primary Variant (Already Exists) */
+.btn-primary {
+  color: white;
+  background-color: #3b82f6;
+}
+
+.btn-primary:hover {
+  background-color: #1e40af;
+}
+
+/* Secondary Variant (Already Exists) */
+.btn-secondary {
+  color: #3b82f6;
+  background-color: #f3f4f6;
+}
+
+.btn-secondary:hover {
+  background-color: #dbeafe;
+}
+
+/* Warning Variant (Already Exists) */
+.btn-warning {
+  color: white;
+  background-color: #f87171;
+}
+
+.btn-warning:hover {
+  background-color: #dc2626;
+}
+
+/* Tertiary/Open Variant (Already Exists) */
+.btn-open {
+  color: #3b82f6;
+  background: none;
+  box-shadow: none;
+}
+
+.btn-open:hover {
+  color: #1e40af;
+}
+
+.btn-open:hover::after {
+  content: '';
+  position: absolute;
+  background-color: #1e40af;
+  bottom: 8px;
+  height: 1px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: calc(100% - 2rem);
+}
+
+/* Additional Custom Variants */
+
+/* Navy Blue Hue */
+.btn-navy {
+  color: white;
+  background-color: #0300aa;
+}
+
+.btn-navy:hover {
+  background-color: #020086; /* navy-blue-desat */
+}
+
+/* Eggplant */
+.btn-eggplant {
+  color: white;
+  background-color: #740081;
+}
+
+.btn-eggplant:hover {
+  background-color: #54005d; /* eggplant-desat */
+}
+
+/* Blue-Violet */
+.btn-blue-violet {
+  color: white;
+  background-color: #44005B;
+}
+
+.btn-blue-violet:hover {
+  background-color: #360048; /* blue-violet-desat */
+}
+
+/* Wine */
+.btn-wine {
+  color: white;
+  background-color: #5A0016;
+}
+
+.btn-wine:hover {
+  background-color: rgb(79, 0, 26); /* wine-desat */
+}
+
+/* Emerald */
+.btn-emerald {
+  color: white;
+  background-color: #006757;
+}
+
+.btn-emerald:hover {
+  background-color: #005548; /* emerald-desat */
+}
+
+/* Disabled State */
+.btn:disabled {
+  color: #9ca3af;
+  background-color: #f9fafb;
+  box-shadow: none;
+  cursor: not-allowed;
+}

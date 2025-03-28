@@ -1,4 +1,7 @@
-<button class="btn" [disabled]="disabled" [ngClass]="getVariant()">
-    <ng-content></ng-content>
-  </button>
-  
+<button 
+  class="btn" 
+  [disabled]="disabled" 
+  [ngClass]="getVariant()"
+  [ngStyle]="{ 'border-radius': borderRadius }">
+  <ng-content></ng-content>
+</button>
