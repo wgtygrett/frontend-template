@@ -1,6 +1,7 @@
-import { Component, ElementRef, Input, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core'
+import { Component, ElementRef, Input, OnDestroy, OnInit, ViewEncapsulation, Inject, PLATFORM_ID } from '@angular/core'
 import { dialogOpenClose } from '../../animations'
 import { DialogService } from '../../services/dialog.service'
+import { isPlatformBrowser } from '@angular/common'
 
 @Component({
   selector: 'app-dialog',
@@ -16,7 +17,11 @@ export class DialogComponent implements OnInit, OnDestroy {
   isOpen: 'open' | 'closed' = 'closed'
   private element: any
 
-  constructor(private dialogService: DialogService, private el: ElementRef) {
+  constructor(
+    private dialogService: DialogService, 
+    private el: ElementRef, 
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
     this.element = this.el.nativeElement
   }
 
@@ -25,33 +30,47 @@ export class DialogComponent implements OnInit, OnDestroy {
       console.error('dialog must have an id')
       return
     }
-    document.body.appendChild(this.element)
 
-    this.element.addEventListener('click', (el: { target: { id: string } }) => {
-      if (el.target.id === 'dialog-container') {
-        this.close()
-      }
-    })
+    // Only access the DOM if we are in the browser
+    if (isPlatformBrowser(this.platformId)) {
+      document.body.appendChild(this.element)
+
+      this.element.addEventListener('click', (el: { target: { id: string } }) => {
+        if (el.target.id === 'dialog-container') {
+          this.close()
+        }
+      })
+    }
 
     this.dialogService.add(this)
   }
 
   ngOnDestroy(): void {
     this.dialogService.remove(this.id)
-    this.element.remove()
+
+    // Only remove the element if we are in the browser
+    if (isPlatformBrowser(this.platformId)) {
+      this.element.remove()
+    }
   }
 
   open(): void {
-    this.element.style.display = 'block'
-    document.body.classList.add('dialog-open')
+    // Only manipulate the DOM if we are in the browser
+    if (isPlatformBrowser(this.platformId)) {
+      this.element.style.display = 'block'
+      document.body.classList.add('dialog-open')
+    }
     this.isOpen = 'open'
   }
 
   close(): void {
-    document.body.classList.remove('dialog-open')
+    // Only manipulate the DOM if we are in the browser
+    if (isPlatformBrowser(this.platformId)) {
+      document.body.classList.remove('dialog-open')
+      setTimeout(() => {
+        this.element.style.display = 'none'
+      }, 300)
+    }
     this.isOpen = 'closed'
-    setTimeout(() => {
-      this.element.style.display = 'none'
-    }, 300)
   }
 }
